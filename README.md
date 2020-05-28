@@ -1,5 +1,5 @@
 # File Extension Editor
-## made by Donovan Adrian in Java
+> made by Donovan Adrian in Java
 ###### I’m sure something like this has been done before, but hey, I got bored and I decided to make a program to make my life easier. This is my first GitHub post as well, so correct me if there are any things that I should add or change to this README!
 
 
