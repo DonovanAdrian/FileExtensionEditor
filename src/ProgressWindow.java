@@ -11,16 +11,7 @@ public class ProgressWindow extends JPanel {
     static int MAXIMUM = 100;
     static int isVisible = 0;
 
-    public ProgressWindow(String labelInput, int maximumInput) {//Add data here to input mainLabel String
-        if(!labelInput.equals(""))
-            mainLblTxt = labelInput;
-        if(maximumInput != 0)
-            MAXIMUM = maximumInput;
-
-        runWindow();
-    }
-
-    private ProgressWindow(){
+    public ProgressWindow(){
         pbar = new JProgressBar();
         pbar.setMinimum(MINIMUM);
         pbar.setMaximum(MAXIMUM);
@@ -33,10 +24,6 @@ public class ProgressWindow extends JPanel {
         return isVisible;
     }
 
-    public void setIsVisible(int isVisible) {
-        ProgressWindow.isVisible = isVisible;
-    }
-
     public void updateBar(int newValue) {
         pbar.setValue(newValue);
     }
@@ -44,6 +31,15 @@ public class ProgressWindow extends JPanel {
     public void closeWindow(){
         frame.setVisible(false);
         isVisible = 0;
+    }
+
+    public void openWindow(String labelInput, int maximumInput){
+        if(!labelInput.equals(""))
+            mainLblTxt = labelInput;
+        if(maximumInput != 0)
+            MAXIMUM = maximumInput;
+
+        runWindow();
     }
 
     public void runWindow() {
@@ -59,21 +55,14 @@ public class ProgressWindow extends JPanel {
     }
 
     public static void center(JFrame frame) {
-
-        // get the size of the screen, on systems with multiple displays,
-        // the primary display is used
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 
-        // calculate the new location of the window
         int w = frame.getSize().width;
         int h = frame.getSize().height;
 
         int x = (dim.width - w) / 2;
         int y = (dim.height - h) / 2;
 
-        // moves this component to a new location, the top-left corner of
-        // the new location is specified by the x and y
-        // parameters in the coordinate space of this component's parent
         frame.setLocation(x, y);
     }
 }

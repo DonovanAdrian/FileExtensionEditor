@@ -8,7 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b118fc9-5f6c-4c06-b12c-df6b497af834" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FileExtensionEditor_jar/FileExtensionEditor.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FileExtensionEditor_jar/FileExtensionEditor.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileExtensionEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileExtensionEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProgressWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProgressWindow.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,37 +54,37 @@
     <session id="-1062865317">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="2" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="62" />
+          <entry key="java" value="262" />
           <entry key="md" value="136" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="62" />
+          <entry key="JAVA" value="262" />
           <entry key="PLAIN_TEXT" value="136" />
         </counts>
       </usages-collector>
@@ -91,14 +92,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileExtensionEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-963">
-              <caret line="1326" column="40" lean-forward="true" selection-start-line="1326" selection-start-column="40" selection-end-line="1326" selection-end-column="40" />
+            <state relative-caret-position="182">
+              <caret line="760" column="14" selection-start-line="760" selection-start-column="8" selection-end-line="760" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ProgressWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -114,10 +124,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>backed</find>
-      <find>retrybool</find>
-      <find>existingextensionsstr</find>
-      <find>backupRetry</find>
       <find>failedFiles</find>
       <find>validdirbool</find>
       <find>setfolderas</find>
@@ -144,6 +150,10 @@
       <find>error</find>
       <find>input</find>
       <find>promptuserExtension</find>
+      <find>prog</find>
+      <find>prgwin</find>
+      <find>getisvisible</find>
+      <find>prgWin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,6 +165,7 @@
         <option value="$PROJECT_DIR$/src/README.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/FileExtensionEditor.java" />
+        <option value="$PROJECT_DIR$/src/ProgressWindow.java" />
       </list>
     </option>
   </component>
@@ -169,6 +180,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,8 +217,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -218,7 +229,7 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="fileextensioneditor" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598243999959" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598593985301" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -295,7 +306,7 @@
     <frame x="0" y="25" width="1280" height="721" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27382874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28594506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -372,8 +383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileExtensionEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-963">
-          <caret line="1326" column="40" lean-forward="true" selection-start-line="1326" selection-start-column="40" selection-end-line="1326" selection-end-column="40" />
+        <state relative-caret-position="182">
+          <caret line="760" column="14" selection-start-line="760" selection-start-column="8" selection-end-line="760" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -382,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProgressWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="150">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>

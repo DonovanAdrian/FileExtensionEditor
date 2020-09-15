@@ -65,7 +65,7 @@ Extra Things ToDo:
  */
 
 public class FileExtensionEditor {
-    private static ProgressWindow prgWin;
+    private static ProgressWindow prgWin = new ProgressWindow();
     private static JFileChooser fileChooser;
     private static File inputFolder;
     private static File backupFolder;
@@ -729,7 +729,7 @@ public class FileExtensionEditor {
     //---------------------------------------------------------------------------------**************
 
     private static void whiteListOperations(){
-        prgWin = new ProgressWindow("Please Wait... Editing Files", filesToEdit.size());
+        prgWin.openWindow("Please Wait... Editing Files", filesToEdit.size());
         initializeFiles(0);
         for (int i = 0; i < filesToEdit.size(); i++){
             renameFile(filesToEdit.get(i), wbListExtension);
@@ -751,7 +751,7 @@ public class FileExtensionEditor {
     }
 
     private static void blackListOperations(){
-        prgWin = new ProgressWindow("Please Wait... Editing Files", filesToEdit.size());
+        prgWin.openWindow("Please Wait... Editing Files", filesToEdit.size());
         initializeFiles(1);
         for (int i = 0; i < filesToEdit.size(); i++){
             renameFile(filesToEdit.get(i), wbListExtension);
@@ -773,7 +773,7 @@ public class FileExtensionEditor {
     }
 
     private static void allFileOperations(){
-        prgWin = new ProgressWindow("Please Wait... Editing Files", filesToEdit.size());
+        prgWin.openWindow("Please Wait... Editing Files", filesToEdit.size());
         initializeFiles(2);
         for (int i = 0; i < filesToEdit.size(); i++){
             renameFile(filesToEdit.get(i), userInput);
@@ -993,7 +993,7 @@ public class FileExtensionEditor {
 
                 //setFolderAsHidden();
 
-                prgWin = new ProgressWindow("Please Wait... Backing Up Files", validFiles.size());
+                prgWin.openWindow("Please Wait... Backing Up Files", validFiles.size());
 
                 for (int i = 0; i < validFiles.size(); i++) {
                     fileQueue = new File(backupFolder.getAbsolutePath() + "/" + validFiles.get(i).getName());
@@ -1177,7 +1177,7 @@ public class FileExtensionEditor {
         if(restoreFailedFiles.size() == 0) {
             try {//This is here because deleteBackup() is called in main
                 System.out.println("Deleting Backup...");
-                prgWin = new ProgressWindow("Please Wait... Deleting Backup", backedUpFiles.size());
+                prgWin.openWindow("Please Wait... Deleting Backup", backedUpFiles.size());
 
                 for (int i = 0; i < backedUpFiles.size(); i++) {
                     File newFile = new File(backupFolder.getAbsolutePath() + "/" + backedUpFiles.get(i).getName());
@@ -1315,7 +1315,7 @@ public class FileExtensionEditor {
         int filesRestored = 0;
         boolean tryAgainRestore = false;
         if (backupExists) {
-            prgWin = new ProgressWindow("Please Wait... Restoring Backup", backedUpFiles.size());
+            prgWin.openWindow("Please Wait... Restoring Backup", backedUpFiles.size());
             for (int i = 0; i < backedUpFiles.size(); i++) {
                 fileQueue = new File(inputFolder.getAbsolutePath() + "/" + backedUpFiles.get(i).getName());
                 try {
@@ -1355,7 +1355,7 @@ public class FileExtensionEditor {
                     boolean tryAgain = false;
                     if (!feeRecovery.exists()) {
                         if (feeRecovery.mkdir()) {
-                            prgWin = new ProgressWindow("Please Wait... Recovering Files", validFiles.size());
+                            prgWin.openWindow("Please Wait... Recovering Files", validFiles.size());
 
                             for (int i = 0; i < restoreFailedFiles.size(); i++) {
                                 fileQueue = new File(feeRecovery.getAbsolutePath() + "/" + restoreFailedFiles.get(i).getName());
@@ -1411,7 +1411,7 @@ public class FileExtensionEditor {
             boolean tryAgainDelete = false;
             int filesDeleted = 0;
             System.out.println("Deleting Incomplete Files...");
-            prgWin = new ProgressWindow("Please Wait... Deleting Edited Files", completedFiles.size());
+            prgWin.openWindow("Please Wait... Deleting Edited Files", completedFiles.size());
             for (int i = 0; i < completedFiles.size(); i++) {
                 if (!completedFiles.get(i).delete()) {
                     if (!tryAgainDelete) {
